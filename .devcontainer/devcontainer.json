@@ -1,0 +1,25 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers-community/templates/tree/main/src/jupyter-datascience-notebooks
+{
+    "name": "Mistral AI API Template",
+    "image": "python:3.14.0",
+    "features": {
+      "ghcr.io/devcontainers/features/common-utils:2": {
+        "installZsh": "true",
+        "username": "codeany",
+        "upgradePackages": true
+      }
+    },
+    "overrideCommand": false,
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-python.debugpy",
+          "ms-python.vscode-pylance",
+          "ms-python.isort"
+        ]
+      }
+    },
+    "postCreateCommand": "pip3 install --user -r requirements.txt"
+  }
